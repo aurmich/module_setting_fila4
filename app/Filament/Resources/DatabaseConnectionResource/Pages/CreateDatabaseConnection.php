@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Setting\Filament\Resources\DatabaseConnectionResource\Pages;
 
+use Modules\Setting\Models\DatabaseConnection;
 use Filament\Resources\Pages\CreateRecord;
 use Modules\Setting\Filament\Resources\DatabaseConnectionResource;
 
@@ -18,16 +19,10 @@ class CreateDatabaseConnection extends CreateRecord
 
     protected function afterCreate(): void
     {
-<<<<<<< HEAD
-        $connection = $this->record;
-
-        if ('active' === $connection->status) {
-=======
-        /** @var \Modules\Setting\Models\DatabaseConnection|null $connection */
+        /** @var DatabaseConnection|null $connection */
         $connection = $this->record;
         
         if ($connection && 'active' === $connection->status) {
->>>>>>> 60ebf14 (.)
             $connection->testConnection();
         }
     }

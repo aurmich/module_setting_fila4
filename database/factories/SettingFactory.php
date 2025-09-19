@@ -9,11 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 use Modules\Setting\Models\Setting;
 
 /**
-<<<<<<< HEAD
  * @extends Factory<Setting>
-=======
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\Modules\Setting\Models\Setting>
->>>>>>> 60ebf14 (.)
  */
 class SettingFactory extends Factory
 {

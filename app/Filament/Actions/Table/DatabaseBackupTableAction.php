@@ -4,11 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Setting\Filament\Actions\Table;
 
-<<<<<<< HEAD
 use Filament\Actions\Action;
-=======
-use Filament\Tables\Actions\Action;
->>>>>>> 60ebf14 (.)
 use Illuminate\Support\Facades\Gate;
 use Modules\Xot\Filament\Traits\NavigationActionLabelTrait;
 

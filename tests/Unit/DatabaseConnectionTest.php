@@ -2,11 +2,8 @@
 declare(strict_types=1);
 namespace Modules\Setting\Tests\Unit;
 
-<<<<<<< HEAD
 use PDO;
 use Exception;
-=======
->>>>>>> 60ebf14 (.)
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\DB;
 use Mockery;
@@ -20,12 +17,7 @@ class DatabaseConnectionTest extends TestCase
      *
      * @return void
      */
-<<<<<<< HEAD
-    public function testDatabaseConnectionModelCanBeInstantiated()
-    {
-=======
     public function testDatabaseConnectionModelCanBeInstantiated(): void {
->>>>>>> 60ebf14 (.)
         $connection = new DatabaseConnection();
 
         $this->assertInstanceOf(DatabaseConnection::class, $connection);
@@ -36,12 +28,7 @@ class DatabaseConnectionTest extends TestCase
      *
      * @return void
      */
-<<<<<<< HEAD
-    public function testCastsAreConfiguredCorrectly()
-    {
-=======
     public function testCastsAreConfiguredCorrectly(): void {
->>>>>>> 60ebf14 (.)
         $connection = new DatabaseConnection();
 
         $this->assertEquals([
@@ -56,16 +43,9 @@ class DatabaseConnectionTest extends TestCase
      *
      * @return void
      */
-<<<<<<< HEAD
-    public function testTestConnectionSucceeds()
-    {
-        // Mock PDO instance
-        $pdoMock = Mockery::mock(PDO::class);
-=======
     public function testTestConnectionSucceeds(): void {
         // Mock PDO instance
-        $pdoMock = Mockery::mock(\PDO::class);
->>>>>>> 60ebf14 (.)
+        $pdoMock = Mockery::mock(PDO::class);
 
         // Mock DB facade
         DB::shouldReceive('connection')
@@ -107,12 +87,7 @@ class DatabaseConnectionTest extends TestCase
      *
      * @return void
      */
-<<<<<<< HEAD
-    public function testTestConnectionFails()
-    {
-=======
     public function testTestConnectionFails(): void {
->>>>>>> 60ebf14 (.)
         // Mock DB facade per simulare un errore di connessione
         DB::shouldReceive('connection')
             ->once()
@@ -121,11 +96,7 @@ class DatabaseConnectionTest extends TestCase
 
         DB::shouldReceive('getPdo')
             ->once()
-<<<<<<< HEAD
             ->andThrow(new Exception('Connection failed'));
-=======
-            ->andThrow(new \Exception('Connection failed'));
->>>>>>> 60ebf14 (.)
 
         // Mock Config facade
         Config::shouldReceive('set')
