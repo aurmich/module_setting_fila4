@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
+=======
+TYPE html>
+>>>>>>> 60ebf14 (.)
 <html lang="en">
     <head>
         <meta charset="utf-8">

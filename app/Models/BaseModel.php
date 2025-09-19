@@ -5,7 +5,10 @@ declare(strict_types=1);
 namespace Modules\Setting\Models;
 
 // ---------- traits
+<<<<<<< HEAD
 use Modules\Xot\Actions\Factory\GetFactoryAction;
+=======
+>>>>>>> 60ebf14 (.)
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 // //use Laravel\Scout\Searchable;
@@ -64,7 +67,11 @@ abstract class BaseModel extends Model
      */
     protected static function newFactory()
     {
+<<<<<<< HEAD
         return app(GetFactoryAction::class)->execute(static::class);
+=======
+        return app(\Modules\Xot\Actions\Factory\GetFactoryAction::class)->execute(static::class);
+>>>>>>> 60ebf14 (.)
     }
 
     /** @return array<string, string> */

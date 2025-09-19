@@ -4,8 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Setting\Models;
 
+<<<<<<< HEAD
 use Exception;
 use Carbon\Carbon;
+=======
+>>>>>>> 60ebf14 (.)
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\DB;
@@ -28,8 +31,13 @@ use Webmozart\Assert\Assert;
  * @property string $engine
  * @property array $options
  * @property string $status
+<<<<<<< HEAD
  * @property Carbon $created_at
  * @property Carbon $updated_at
+=======
+ * @property \Carbon\Carbon $created_at
+ * @property \Carbon\Carbon $updated_at
+>>>>>>> 60ebf14 (.)
  */
 class DatabaseConnection extends Model
 {
@@ -60,8 +68,18 @@ class DatabaseConnection extends Model
 
     public function getRows(): array
     {
+<<<<<<< HEAD
         $connections = config('database.connections');
         
+=======
+        /** @var array<string, mixed>|mixed $connections */
+        $connections = config('database.connections');
+        
+        if (!is_array($connections)) {
+            return [];
+        }
+        
+>>>>>>> 60ebf14 (.)
         return Arr::map(
             $connections,
             fn (array $value, string $key): array => [
@@ -109,7 +127,11 @@ class DatabaseConnection extends Model
             DB::connection('test_connection')->getPdo();
 
             return true;
+<<<<<<< HEAD
         } catch (Exception $e) {
+=======
+        } catch (\Exception $e) {
+>>>>>>> 60ebf14 (.)
             report($e);
             return false;
         }
