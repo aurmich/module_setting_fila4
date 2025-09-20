@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-lament::page>
-=======
 <x-filament::page>
->>>>>>> 9bba149 (.)
     <table>
     <thead>
         <tr>

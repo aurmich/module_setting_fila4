@@ -17,12 +17,8 @@ class DatabaseConnectionTest extends TestCase
      *
      * @return void
      */
-<<<<<<< HEAD
-    public function testDatabaseConnectionModelCanBeInstantiated(): void {
-=======
     public function testDatabaseConnectionModelCanBeInstantiated()
     {
->>>>>>> 9bba149 (.)
         $connection = new DatabaseConnection();
 
         $this->assertInstanceOf(DatabaseConnection::class, $connection);
@@ -33,12 +29,8 @@ class DatabaseConnectionTest extends TestCase
      *
      * @return void
      */
-<<<<<<< HEAD
-    public function testCastsAreConfiguredCorrectly(): void {
-=======
     public function testCastsAreConfiguredCorrectly()
     {
->>>>>>> 9bba149 (.)
         $connection = new DatabaseConnection();
 
         $this->assertEquals([
@@ -53,12 +45,8 @@ class DatabaseConnectionTest extends TestCase
      *
      * @return void
      */
-<<<<<<< HEAD
-    public function testTestConnectionSucceeds(): void {
-=======
     public function testTestConnectionSucceeds()
     {
->>>>>>> 9bba149 (.)
         // Mock PDO instance
         $pdoMock = Mockery::mock(PDO::class);
 
@@ -102,12 +90,8 @@ class DatabaseConnectionTest extends TestCase
      *
      * @return void
      */
-<<<<<<< HEAD
-    public function testTestConnectionFails(): void {
-=======
     public function testTestConnectionFails()
     {
->>>>>>> 9bba149 (.)
         // Mock DB facade per simulare un errore di connessione
         DB::shouldReceive('connection')
             ->once()
