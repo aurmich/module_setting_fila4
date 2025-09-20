@@ -6,7 +6,10 @@ namespace Modules\Setting\Filament\Resources\DatabaseConnectionResource\Pages;
 
 use Filament\Actions\DeleteAction;
 use Filament\Actions\Action;
+<<<<<<< HEAD
 use Modules\Setting\Models\DatabaseConnection;
+=======
+>>>>>>> 9bba149 (.)
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 use Modules\Setting\Filament\Resources\DatabaseConnectionResource;
@@ -20,11 +23,15 @@ class EditDatabaseConnection extends EditRecord
         return [
             DeleteAction::make(),
             Action::make('test')
+<<<<<<< HEAD
                 ->action(function () {
                     /** @var DatabaseConnection|null $record */
                     $record = $this->record;
                     $record?->testConnection();
                 })
+=======
+                ->action(fn () => $this->record->testConnection())
+>>>>>>> 9bba149 (.)
                 ->icon('heroicon-o-check-circle')
                 ->color('success'),
         ];
@@ -32,11 +39,16 @@ class EditDatabaseConnection extends EditRecord
 
     protected function afterSave(): void
     {
+<<<<<<< HEAD
         /** @var DatabaseConnection|null $record */
         $record = $this->record;
         
         if ($record && 'active' === $record->status) {
             $record->testConnection();
+=======
+        if ('active' === $this->record->status) {
+            $this->record->testConnection();
+>>>>>>> 9bba149 (.)
         }
     }
 

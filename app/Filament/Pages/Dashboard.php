@@ -4,10 +4,17 @@ declare(strict_types=1);
 
 namespace Modules\Setting\Filament\Pages;
 
+<<<<<<< HEAD
 use Modules\Xot\Filament\Pages\XotBaseDashboard;
 use Illuminate\Support\Facades\Process as LaravelProcess;
 
 class Dashboard extends XotBaseDashboard
+=======
+use Filament\Pages\Page;
+use Illuminate\Support\Facades\Process as LaravelProcess;
+
+class Dashboard extends Page
+>>>>>>> 9bba149 (.)
 {
     protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-document-text';
 
@@ -27,7 +34,10 @@ class Dashboard extends XotBaseDashboard
 
     // public function mount(): void {
     //     $user = auth()->user();
+<<<<<<< HEAD
     //     // @phpstan-ignore-next-line method.nonObject
+=======
+>>>>>>> 9bba149 (.)
     //     if(!$user->hasRole('super-admin')){
     //         redirect('/admin');
     //     }
