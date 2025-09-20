@@ -17,7 +17,6 @@ class EditDatabaseConnection extends EditRecord
 
     protected function getHeaderActions(): array
     {
-        /** @var array<string, Action> */
         return [
             DeleteAction::make(),
             Action::make('test')

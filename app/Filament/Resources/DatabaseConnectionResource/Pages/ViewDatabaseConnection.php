@@ -18,7 +18,6 @@ class ViewDatabaseConnection extends ViewRecord
 
     protected function getHeaderActions(): array
     {
-        /** @var array<string, Action> */
         return [
             EditAction::make(),
             DeleteAction::make(),

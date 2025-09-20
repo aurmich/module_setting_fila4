@@ -24,7 +24,6 @@ class ListDatabaseConnections extends ListRecords
 
     protected function getHeaderActions(): array
     {
-        /** @var array<string, Action> */
         return [
             CreateAction::make(),
         ];

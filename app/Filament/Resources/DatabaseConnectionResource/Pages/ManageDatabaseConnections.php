@@ -16,7 +16,6 @@ class ManageDatabaseConnections extends ManageRecords
 
     protected function getHeaderActions(): array
     {
-        /** @var array<string, Action> */
         return [
             CreateAction::make(),
         ];
