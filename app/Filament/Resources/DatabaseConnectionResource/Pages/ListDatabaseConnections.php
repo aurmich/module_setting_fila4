@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Setting\Filament\Resources\DatabaseConnectionResource\Pages;
 
+<<<<<<< HEAD
 use Filament\Actions\CreateAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
@@ -13,6 +14,8 @@ use Filament\Actions\DeleteAction;
 use Filament\Actions\Action;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
+=======
+>>>>>>> 481b350 (.)
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
 use Filament\Tables;
@@ -25,13 +28,18 @@ class ListDatabaseConnections extends ListRecords
     protected function getHeaderActions(): array
     {
         return [
+<<<<<<< HEAD
             CreateAction::make(),
+=======
+            Actions\CreateAction::make(),
+>>>>>>> 481b350 (.)
         ];
     }
 
     protected function getTableColumns(): array
     {
         return [
+<<<<<<< HEAD
             TextColumn::make('name')
                 ->searchable()
                 ->sortable(),
@@ -45,6 +53,21 @@ class ListDatabaseConnections extends ListRecords
                 ->searchable()
                 ->sortable(),
             TextColumn::make('status')
+=======
+            Tables\Columns\TextColumn::make('name')
+                ->searchable()
+                ->sortable(),
+            Tables\Columns\TextColumn::make('driver')
+                ->searchable()
+                ->sortable(),
+            Tables\Columns\TextColumn::make('host')
+                ->searchable()
+                ->sortable(),
+            Tables\Columns\TextColumn::make('database')
+                ->searchable()
+                ->sortable(),
+            Tables\Columns\TextColumn::make('status')
+>>>>>>> 481b350 (.)
                 ->badge()
                 ->color(fn (string $state): string => match ($state) {
                     'active' => 'success',
@@ -55,36 +78,61 @@ class ListDatabaseConnections extends ListRecords
         ];
     }
 
+<<<<<<< HEAD
     public function table(Table $table): Table
+=======
+    public function table(Tables\Table $table): Tables\Table
+>>>>>>> 481b350 (.)
     {
         return $table
             ->columns($this->getTableColumns())
             ->filters([
+<<<<<<< HEAD
                 SelectFilter::make('driver')
+=======
+                Tables\Filters\SelectFilter::make('driver')
+>>>>>>> 481b350 (.)
                     ->options([
                         'mysql' => 'MySQL',
                         'pgsql' => 'PostgreSQL',
                         'sqlite' => 'SQLite',
                         'sqlsrv' => 'SQL Server',
                     ]),
+<<<<<<< HEAD
                 SelectFilter::make('status')
+=======
+                Tables\Filters\SelectFilter::make('status')
+>>>>>>> 481b350 (.)
                     ->options([
                         'active' => 'Active',
                         'inactive' => 'Inactive',
                         'testing' => 'Testing',
                     ]),
             ])
+<<<<<<< HEAD
             ->recordActions([
                 EditAction::make(),
                 DeleteAction::make(),
                 Action::make('test')
+=======
+            ->actions([
+                Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
+                Tables\Actions\Action::make('test')
+>>>>>>> 481b350 (.)
                     ->action(fn ($record) => $record->testConnection())
                     ->icon('heroicon-o-check-circle')
                     ->color('success'),
             ])
+<<<<<<< HEAD
             ->toolbarActions([
                 BulkActionGroup::make([
                     DeleteBulkAction::make(),
+=======
+            ->bulkActions([
+                Tables\Actions\BulkActionGroup::make([
+                    Tables\Actions\DeleteBulkAction::make(),
+>>>>>>> 481b350 (.)
                 ]),
             ]);
     }

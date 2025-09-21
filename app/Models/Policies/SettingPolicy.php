@@ -64,4 +64,8 @@ class SettingPolicy extends SettingBasePolicy
     {
         return $user->hasPermissionTo('setting.forceDelete');
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 481b350 (.)

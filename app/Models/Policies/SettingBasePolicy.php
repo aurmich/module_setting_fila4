@@ -21,4 +21,8 @@ abstract class SettingBasePolicy
 
         return null;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 481b350 (.)

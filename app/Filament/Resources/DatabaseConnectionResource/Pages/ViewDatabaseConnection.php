@@ -4,9 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Setting\Filament\Resources\DatabaseConnectionResource\Pages;
 
+<<<<<<< HEAD
 use Filament\Actions\EditAction;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\Action;
+=======
+>>>>>>> 481b350 (.)
 use Filament\Actions;
 use Filament\Resources\Pages\ViewRecord;
 use Modules\Setting\Filament\Resources\DatabaseConnectionResource;
@@ -18,10 +21,17 @@ class ViewDatabaseConnection extends ViewRecord
     protected function getHeaderActions(): array
     {
         return [
+<<<<<<< HEAD
             EditAction::make(),
             DeleteAction::make(),
             Action::make('test')
                 ->action(fn () => $this->record?->testConnection())
+=======
+            Actions\EditAction::make(),
+            Actions\DeleteAction::make(),
+            Actions\Action::make('test')
+                ->action(fn () => $this->record->testConnection())
+>>>>>>> 481b350 (.)
                 ->icon('heroicon-o-check-circle')
                 ->color('success'),
         ];

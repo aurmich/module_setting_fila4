@@ -20,7 +20,11 @@ class CreateDatabaseConnection extends CreateRecord
     {
         $connection = $this->record;
 
+<<<<<<< HEAD
         if ($connection !== null && 'active' === $connection->status) {
+=======
+        if ('active' === $connection->status) {
+>>>>>>> 481b350 (.)
             $connection->testConnection();
         }
     }

@@ -4,8 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Setting\Filament\Resources\DatabaseConnectionResource\Pages;
 
+<<<<<<< HEAD
 use Filament\Actions\DeleteAction;
 use Filament\Actions\Action;
+=======
+>>>>>>> 481b350 (.)
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 use Modules\Setting\Filament\Resources\DatabaseConnectionResource;
@@ -17,9 +20,15 @@ class EditDatabaseConnection extends EditRecord
     protected function getHeaderActions(): array
     {
         return [
+<<<<<<< HEAD
             DeleteAction::make(),
             Action::make('test')
                 ->action(fn () => $this->record?->testConnection())
+=======
+            Actions\DeleteAction::make(),
+            Actions\Action::make('test')
+                ->action(fn () => $this->record->testConnection())
+>>>>>>> 481b350 (.)
                 ->icon('heroicon-o-check-circle')
                 ->color('success'),
         ];
@@ -27,7 +36,11 @@ class EditDatabaseConnection extends EditRecord
 
     protected function afterSave(): void
     {
+<<<<<<< HEAD
         if ($this->record !== null && 'active' === $this->record->status) {
+=======
+        if ('active' === $this->record->status) {
+>>>>>>> 481b350 (.)
             $this->record->testConnection();
         }
     }

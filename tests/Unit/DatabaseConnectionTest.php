@@ -2,8 +2,11 @@
 declare(strict_types=1);
 namespace Modules\Setting\Tests\Unit;
 
+<<<<<<< HEAD
 use PDO;
 use Exception;
+=======
+>>>>>>> 481b350 (.)
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\DB;
 use Mockery;
@@ -48,7 +51,11 @@ class DatabaseConnectionTest extends TestCase
     public function testTestConnectionSucceeds()
     {
         // Mock PDO instance
+<<<<<<< HEAD
         $pdoMock = Mockery::mock(PDO::class);
+=======
+        $pdoMock = Mockery::mock(\PDO::class);
+>>>>>>> 481b350 (.)
 
         // Mock DB facade
         DB::shouldReceive('connection')
@@ -100,7 +107,11 @@ class DatabaseConnectionTest extends TestCase
 
         DB::shouldReceive('getPdo')
             ->once()
+<<<<<<< HEAD
             ->andThrow(new Exception('Connection failed'));
+=======
+            ->andThrow(new \Exception('Connection failed'));
+>>>>>>> 481b350 (.)
 
         // Mock Config facade
         Config::shouldReceive('set')

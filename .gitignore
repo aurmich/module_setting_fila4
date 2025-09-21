@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Dependencies and packages
 /vendor/
 /node_modules/
@@ -76,6 +77,8 @@ cache/
 # Development tools
 .windsurf/
 .cursor/
+=======
+>>>>>>> 481b350 (.)
 /vendor
 *.lock
 /build
