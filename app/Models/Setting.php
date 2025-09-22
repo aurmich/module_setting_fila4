@@ -5,14 +5,20 @@ declare(strict_types=1);
 namespace Modules\Setting\Models;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 467a949 (.)
 use Illuminate\Support\Carbon;
 use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 use Modules\Media\Models\Media;
 use Modules\Setting\Database\Factories\SettingFactory;
 use Illuminate\Database\Eloquent\Builder;
 use Modules\Xot\Contracts\ProfileContract;
+<<<<<<< HEAD
 =======
 >>>>>>> 481b350 (.)
+=======
+>>>>>>> 467a949 (.)
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
@@ -24,6 +30,9 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @property int                                                                                                        $locked
  * @property string                                                                                                     $payload
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 467a949 (.)
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property MediaCollection<int, Media> $media
@@ -43,6 +52,7 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  *
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
+<<<<<<< HEAD
 =======
  * @property \Illuminate\Support\Carbon|null                                                                            $created_at
  * @property \Illuminate\Support\Carbon|null                                                                            $updated_at
@@ -64,6 +74,8 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
 >>>>>>> 481b350 (.)
+=======
+>>>>>>> 467a949 (.)
  *
  * @mixin \Eloquent
  */

@@ -65,7 +65,11 @@ class DatabaseConnectionPolicy extends SettingBasePolicy
         return $user->hasPermissionTo('database_connection.forceDelete');
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> 481b350 (.)
+=======
+}
+>>>>>>> 467a949 (.)

@@ -5,6 +5,9 @@ declare(strict_types=1);
 namespace Modules\Setting\Filament\Resources;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 467a949 (.)
 use Filament\Schemas\Schema;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Select;
@@ -21,10 +24,13 @@ use Modules\Setting\Filament\Resources\DatabaseConnectionResource\Pages\CreateDa
 use Modules\Setting\Filament\Resources\DatabaseConnectionResource\Pages\ViewDatabaseConnection;
 use Modules\Setting\Filament\Resources\DatabaseConnectionResource\Pages\EditDatabaseConnection;
 use Filament\Forms;
+<<<<<<< HEAD
 =======
 use Filament\Forms;
 use Filament\Forms\Form;
 >>>>>>> 481b350 (.)
+=======
+>>>>>>> 467a949 (.)
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
@@ -36,6 +42,9 @@ class DatabaseConnectionResource extends Resource
     protected static ?string $model = DatabaseConnection::class;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 467a949 (.)
     protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-database';
 
     protected static string | \UnitEnum | null $navigationGroup = 'Configurazione';
@@ -50,6 +59,7 @@ class DatabaseConnectionResource extends Resource
                     ->required()
                     ->maxLength(255),
                 Select::make('driver')
+<<<<<<< HEAD
 =======
     protected static ?string $navigationIcon = 'heroicon-o-database';
 
@@ -66,6 +76,8 @@ class DatabaseConnectionResource extends Resource
                     ->maxLength(255),
                 Forms\Components\Select::make('driver')
 >>>>>>> 481b350 (.)
+=======
+>>>>>>> 467a949 (.)
                     ->required()
                     ->options([
                         'mysql' => 'MySQL',
@@ -74,6 +86,9 @@ class DatabaseConnectionResource extends Resource
                         'sqlsrv' => 'SQL Server',
                     ]),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 467a949 (.)
                 TextInput::make('host')
                     ->required()
                     ->maxLength(255),
@@ -102,6 +117,7 @@ class DatabaseConnectionResource extends Resource
                     ->maxLength(255),
                 KeyValue::make('options'),
                 Select::make('status')
+<<<<<<< HEAD
 =======
                 Forms\Components\TextInput::make('host')
                     ->required()
@@ -132,6 +148,8 @@ class DatabaseConnectionResource extends Resource
                 Forms\Components\KeyValue::make('options'),
                 Forms\Components\Select::make('status')
 >>>>>>> 481b350 (.)
+=======
+>>>>>>> 467a949 (.)
                     ->required()
                     ->options([
                         'active' => 'Active',
@@ -145,6 +163,9 @@ class DatabaseConnectionResource extends Resource
         return $table
             ->columns([
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 467a949 (.)
                 TextColumn::make('name')
                     ->searchable(),
                 TextColumn::make('driver')
@@ -175,6 +196,7 @@ class DatabaseConnectionResource extends Resource
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('updated_at')
+<<<<<<< HEAD
 =======
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
@@ -207,6 +229,8 @@ class DatabaseConnectionResource extends Resource
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
 >>>>>>> 481b350 (.)
+=======
+>>>>>>> 467a949 (.)
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
@@ -215,6 +239,9 @@ class DatabaseConnectionResource extends Resource
                 //
             ])
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 467a949 (.)
             ->recordActions([
                 ViewAction::make(),
                 EditAction::make(),
@@ -222,6 +249,7 @@ class DatabaseConnectionResource extends Resource
             ->toolbarActions([
                 BulkActionGroup::make([
                     DeleteBulkAction::make(),
+<<<<<<< HEAD
 =======
             ->actions([
                 Tables\Actions\ViewAction::make(),
@@ -231,6 +259,8 @@ class DatabaseConnectionResource extends Resource
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
 >>>>>>> 481b350 (.)
+=======
+>>>>>>> 467a949 (.)
                 ]),
             ]);
     }
@@ -246,16 +276,22 @@ class DatabaseConnectionResource extends Resource
     {
         return [
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 467a949 (.)
             'index' => ListDatabaseConnections::route('/'),
             'create' => CreateDatabaseConnection::route('/create'),
             'view' => ViewDatabaseConnection::route('/{record}'),
             'edit' => EditDatabaseConnection::route('/{record}/edit'),
+<<<<<<< HEAD
 =======
             'index' => Pages\ListDatabaseConnections::route('/'),
             'create' => Pages\CreateDatabaseConnection::route('/create'),
             'view' => Pages\ViewDatabaseConnection::route('/{record}'),
             'edit' => Pages\EditDatabaseConnection::route('/{record}/edit'),
 >>>>>>> 481b350 (.)
+=======
+>>>>>>> 467a949 (.)
         ];
     }
 }

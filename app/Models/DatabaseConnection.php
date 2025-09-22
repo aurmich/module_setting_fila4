@@ -5,10 +5,15 @@ declare(strict_types=1);
 namespace Modules\Setting\Models;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Exception;
 use Carbon\Carbon;
 =======
 >>>>>>> 481b350 (.)
+=======
+use Exception;
+use Carbon\Carbon;
+>>>>>>> 467a949 (.)
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\DB;
@@ -32,12 +37,17 @@ use Webmozart\Assert\Assert;
  * @property array $options
  * @property string $status
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @property Carbon $created_at
  * @property Carbon $updated_at
 =======
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
 >>>>>>> 481b350 (.)
+=======
+ * @property Carbon $created_at
+ * @property Carbon $updated_at
+>>>>>>> 467a949 (.)
  */
 class DatabaseConnection extends Model
 {
@@ -118,10 +128,14 @@ class DatabaseConnection extends Model
 
             return true;
 <<<<<<< HEAD
+<<<<<<< HEAD
         } catch (Exception $e) {
 =======
         } catch (\Exception $e) {
 >>>>>>> 481b350 (.)
+=======
+        } catch (Exception $e) {
+>>>>>>> 467a949 (.)
             report($e);
             return false;
         }

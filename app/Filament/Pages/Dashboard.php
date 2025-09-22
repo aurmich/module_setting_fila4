@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Process as LaravelProcess;
 class Dashboard extends Page
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-document-text';
 
     protected string $view = 'setting::filament.pages.dashboard';
@@ -18,6 +19,11 @@ class Dashboard extends Page
 
     protected static string $view = 'setting::filament.pages.dashboard';
 >>>>>>> 481b350 (.)
+=======
+    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-document-text';
+
+    protected string $view = 'setting::filament.pages.dashboard';
+>>>>>>> 467a949 (.)
 
     public function upgrade(): void
     {

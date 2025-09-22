@@ -5,6 +5,9 @@ declare(strict_types=1);
 namespace Modules\Setting\Filament\Resources\DatabaseConnectionResource\Pages;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 467a949 (.)
 use Filament\Actions\CreateAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
@@ -14,8 +17,11 @@ use Filament\Actions\DeleteAction;
 use Filament\Actions\Action;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
+<<<<<<< HEAD
 =======
 >>>>>>> 481b350 (.)
+=======
+>>>>>>> 467a949 (.)
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
 use Filament\Tables;
@@ -29,10 +35,14 @@ class ListDatabaseConnections extends ListRecords
     {
         return [
 <<<<<<< HEAD
+<<<<<<< HEAD
             CreateAction::make(),
 =======
             Actions\CreateAction::make(),
 >>>>>>> 481b350 (.)
+=======
+            CreateAction::make(),
+>>>>>>> 467a949 (.)
         ];
     }
 
@@ -40,6 +50,9 @@ class ListDatabaseConnections extends ListRecords
     {
         return [
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 467a949 (.)
             TextColumn::make('name')
                 ->searchable()
                 ->sortable(),
@@ -53,6 +66,7 @@ class ListDatabaseConnections extends ListRecords
                 ->searchable()
                 ->sortable(),
             TextColumn::make('status')
+<<<<<<< HEAD
 =======
             Tables\Columns\TextColumn::make('name')
                 ->searchable()
@@ -68,6 +82,8 @@ class ListDatabaseConnections extends ListRecords
                 ->sortable(),
             Tables\Columns\TextColumn::make('status')
 >>>>>>> 481b350 (.)
+=======
+>>>>>>> 467a949 (.)
                 ->badge()
                 ->color(fn (string $state): string => match ($state) {
                     'active' => 'success',
@@ -79,19 +95,27 @@ class ListDatabaseConnections extends ListRecords
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function table(Table $table): Table
 =======
     public function table(Tables\Table $table): Tables\Table
 >>>>>>> 481b350 (.)
+=======
+    public function table(Table $table): Table
+>>>>>>> 467a949 (.)
     {
         return $table
             ->columns($this->getTableColumns())
             ->filters([
 <<<<<<< HEAD
+<<<<<<< HEAD
                 SelectFilter::make('driver')
 =======
                 Tables\Filters\SelectFilter::make('driver')
 >>>>>>> 481b350 (.)
+=======
+                SelectFilter::make('driver')
+>>>>>>> 467a949 (.)
                     ->options([
                         'mysql' => 'MySQL',
                         'pgsql' => 'PostgreSQL',
@@ -99,10 +123,14 @@ class ListDatabaseConnections extends ListRecords
                         'sqlsrv' => 'SQL Server',
                     ]),
 <<<<<<< HEAD
+<<<<<<< HEAD
                 SelectFilter::make('status')
 =======
                 Tables\Filters\SelectFilter::make('status')
 >>>>>>> 481b350 (.)
+=======
+                SelectFilter::make('status')
+>>>>>>> 467a949 (.)
                     ->options([
                         'active' => 'Active',
                         'inactive' => 'Inactive',
@@ -110,20 +138,27 @@ class ListDatabaseConnections extends ListRecords
                     ]),
             ])
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 467a949 (.)
             ->recordActions([
                 EditAction::make(),
                 DeleteAction::make(),
                 Action::make('test')
+<<<<<<< HEAD
 =======
             ->actions([
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
                 Tables\Actions\Action::make('test')
 >>>>>>> 481b350 (.)
+=======
+>>>>>>> 467a949 (.)
                     ->action(fn ($record) => $record->testConnection())
                     ->icon('heroicon-o-check-circle')
                     ->color('success'),
             ])
+<<<<<<< HEAD
 <<<<<<< HEAD
             ->toolbarActions([
                 BulkActionGroup::make([
@@ -133,6 +168,11 @@ class ListDatabaseConnections extends ListRecords
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
 >>>>>>> 481b350 (.)
+=======
+            ->toolbarActions([
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
+>>>>>>> 467a949 (.)
                 ]),
             ]);
     }

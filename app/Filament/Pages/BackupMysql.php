@@ -12,11 +12,15 @@ use Webmozart\Assert\Assert;
 class BackupMysql extends Page
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 467a949 (.)
     protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-cog';
 
     protected static string | \UnitEnum | null $navigationGroup = 'Settings';
 
     protected string $view = 'setting::filament.pages.backup-mysql';
+<<<<<<< HEAD
 =======
     protected static ?string $navigationIcon = 'heroicon-o-cog';
 
@@ -24,6 +28,8 @@ class BackupMysql extends Page
 
     protected static string $view = 'setting::filament.pages.backup-mysql';
 >>>>>>> 481b350 (.)
+=======
+>>>>>>> 467a949 (.)
 
     public function download(string $connectionName): BinaryFileResponse
     {

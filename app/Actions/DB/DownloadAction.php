@@ -9,10 +9,15 @@ declare(strict_types=1);
 namespace Modules\Setting\Actions\DB;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Xot\Actions\File\FixPathAction;
 use Modules\Xot\Actions\File\CreateDirectoryForFilenameAction;
 =======
 >>>>>>> 481b350 (.)
+=======
+use Modules\Xot\Actions\File\FixPathAction;
+use Modules\Xot\Actions\File\CreateDirectoryForFilenameAction;
+>>>>>>> 467a949 (.)
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Process as LaravelProcess;
 use Illuminate\Support\Facades\Storage;
@@ -35,12 +40,17 @@ class DownloadAction
         $filename = 'backup-'.$connectionName.'-'.Carbon::now()->format('Y-m-d').'.gz';
         $backup_path = Storage::disk('cache')->path('backup/'.$filename);
 <<<<<<< HEAD
+<<<<<<< HEAD
         $backup_path = app(FixPathAction::class)->execute($backup_path);
         app(CreateDirectoryForFilenameAction::class)->execute($backup_path);
 =======
         $backup_path = app(\Modules\Xot\Actions\File\FixPathAction::class)->execute($backup_path);
         app(\Modules\Xot\Actions\File\CreateDirectoryForFilenameAction::class)->execute($backup_path);
 >>>>>>> 481b350 (.)
+=======
+        $backup_path = app(FixPathAction::class)->execute($backup_path);
+        app(CreateDirectoryForFilenameAction::class)->execute($backup_path);
+>>>>>>> 467a949 (.)
         $command = sprintf('mysqldump --user=%s --password=%s %s | gzip > %s', $db['username'], $db['password'], $db['database'], $backup_path);
         LaravelProcess::run($command);
 
