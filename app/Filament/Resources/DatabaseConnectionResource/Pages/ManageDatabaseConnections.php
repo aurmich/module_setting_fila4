@@ -6,12 +6,17 @@ namespace Modules\Setting\Filament\Resources\DatabaseConnectionResource\Pages;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Actions\CreateAction;
 =======
 >>>>>>> 481b350 (.)
 =======
 use Filament\Actions\CreateAction;
 >>>>>>> 467a949 (.)
+=======
+use Filament\Actions\CreateAction;
+use Filament\Actions\Action;
+>>>>>>> 7ce3af5 (.)
 use Filament\Actions;
 use Filament\Resources\Pages\ManageRecords;
 use Modules\Setting\Filament\Resources\DatabaseConnectionResource;
@@ -25,6 +30,7 @@ class ManageDatabaseConnections extends ManageRecords
         return [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             CreateAction::make(),
 =======
             Actions\CreateAction::make(),
@@ -32,6 +38,9 @@ class ManageDatabaseConnections extends ManageRecords
 =======
             CreateAction::make(),
 >>>>>>> 467a949 (.)
+=======
+            CreateAction::make(),
+>>>>>>> 7ce3af5 (.)
         ];
     }
 }

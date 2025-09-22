@@ -6,6 +6,7 @@ namespace Modules\Setting\Filament\Resources\DatabaseConnectionResource\Pages;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Actions\EditAction;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\Action;
@@ -16,6 +17,12 @@ use Filament\Actions\EditAction;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\Action;
 >>>>>>> 467a949 (.)
+=======
+use Filament\Actions\EditAction;
+use Filament\Actions\DeleteAction;
+use Filament\Actions\Action;
+use Modules\Setting\Models\DatabaseConnection;
+>>>>>>> 7ce3af5 (.)
 use Filament\Actions;
 use Filament\Resources\Pages\ViewRecord;
 use Modules\Setting\Filament\Resources\DatabaseConnectionResource;
@@ -27,6 +34,7 @@ class ViewDatabaseConnection extends ViewRecord
     protected function getHeaderActions(): array
     {
         return [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -44,6 +52,16 @@ class ViewDatabaseConnection extends ViewRecord
 >>>>>>> 481b350 (.)
 =======
 >>>>>>> 467a949 (.)
+=======
+            EditAction::make(),
+            DeleteAction::make(),
+            Action::make('test')
+                ->action(function () {
+                    /** @var DatabaseConnection|null $record */
+                    $record = $this->record;
+                    $record?->testConnection();
+                })
+>>>>>>> 7ce3af5 (.)
                 ->icon('heroicon-o-check-circle')
                 ->color('success'),
         ];

@@ -6,6 +6,7 @@ namespace Modules\Setting\Filament\Actions\Table;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Actions\Action;
 =======
 use Filament\Tables\Actions\Action;
@@ -13,6 +14,9 @@ use Filament\Tables\Actions\Action;
 =======
 use Filament\Actions\Action;
 >>>>>>> 467a949 (.)
+=======
+use Filament\Actions\Action;
+>>>>>>> 7ce3af5 (.)
 use Illuminate\Support\Facades\Gate;
 use Modules\Xot\Filament\Traits\NavigationActionLabelTrait;
 

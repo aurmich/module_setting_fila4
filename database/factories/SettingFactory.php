@@ -11,6 +11,7 @@ use Modules\Setting\Models\Setting;
 /**
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @extends Factory<Setting>
 =======
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\Modules\Setting\Models\Setting>
@@ -18,6 +19,9 @@ use Modules\Setting\Models\Setting;
 =======
  * @extends Factory<Setting>
 >>>>>>> 467a949 (.)
+=======
+ * @extends Factory<Setting>
+>>>>>>> 7ce3af5 (.)
  */
 class SettingFactory extends Factory
 {

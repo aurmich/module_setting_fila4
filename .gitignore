@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7ce3af5 (.)
 # Dependencies and packages
 /vendor/
 /node_modules/
@@ -56,6 +59,7 @@ Homestead.json
 .git-rewrite
 
 # Temporary and system files
+<<<<<<< HEAD
 =======
 # ==============================================
 # LARAXOT MODULE SETTING - .GITIGNORE
@@ -96,11 +100,16 @@ cache/
 *.phar
 *.jar
 >>>>>>> 467a949 (.)
+=======
+>>>>>>> 7ce3af5 (.)
 *.tmp
 *.swp
 *.swo
 *.stackdump
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7ce3af5 (.)
 *.exe
 *:Zone.Identifier
 .DS_Store
@@ -118,6 +127,7 @@ cache/
 
 # Development tools
 .windsurf/
+<<<<<<< HEAD
 .cursor/
 =======
 >>>>>>> 481b350 (.)
@@ -306,3 +316,6 @@ test_settings.sql
 laravel
 public_html
 >>>>>>> 467a949 (.)
+=======
+.cursor/
+>>>>>>> 7ce3af5 (.)

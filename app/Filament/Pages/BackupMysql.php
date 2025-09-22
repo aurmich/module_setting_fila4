@@ -13,13 +13,17 @@ class BackupMysql extends Page
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 467a949 (.)
+=======
+>>>>>>> 7ce3af5 (.)
     protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-cog';
 
     protected static string | \UnitEnum | null $navigationGroup = 'Settings';
 
     protected string $view = 'setting::filament.pages.backup-mysql';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     protected static ?string $navigationIcon = 'heroicon-o-cog';
@@ -30,6 +34,8 @@ class BackupMysql extends Page
 >>>>>>> 481b350 (.)
 =======
 >>>>>>> 467a949 (.)
+=======
+>>>>>>> 7ce3af5 (.)
 
     public function download(string $connectionName): BinaryFileResponse
     {
@@ -38,6 +44,10 @@ class BackupMysql extends Page
 
     // public function mount(): void {
     //     $user = auth()->user();
+<<<<<<< HEAD
+=======
+    //     // @phpstan-ignore-next-line method.nonObject
+>>>>>>> 7ce3af5 (.)
     //     if(!$user->hasRole('super-admin')){
     //         redirect('/admin');
     //     }
@@ -47,7 +57,11 @@ class BackupMysql extends Page
     {
         Assert::isArray($connections = config('database.connections'));
 
+<<<<<<< HEAD
         $connections = array_filter($connections, fn ($item): bool => 'mysql' === $item['driver']);
+=======
+        $connections = array_filter($connections, fn ($item): bool => $item['driver'] === 'mysql');
+>>>>>>> 7ce3af5 (.)
 
         // $connections=collect($connections)->keyBy('database');
         return ['connections' => $connections];

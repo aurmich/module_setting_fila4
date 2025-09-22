@@ -6,6 +6,7 @@ namespace Modules\Setting\Models;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Exception;
 use Carbon\Carbon;
 =======
@@ -14,6 +15,10 @@ use Carbon\Carbon;
 use Exception;
 use Carbon\Carbon;
 >>>>>>> 467a949 (.)
+=======
+use Exception;
+use Carbon\Carbon;
+>>>>>>> 7ce3af5 (.)
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\DB;
@@ -38,6 +43,7 @@ use Webmozart\Assert\Assert;
  * @property string $status
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @property Carbon $created_at
  * @property Carbon $updated_at
 =======
@@ -48,6 +54,10 @@ use Webmozart\Assert\Assert;
  * @property Carbon $created_at
  * @property Carbon $updated_at
 >>>>>>> 467a949 (.)
+=======
+ * @property Carbon $created_at
+ * @property Carbon $updated_at
+>>>>>>> 7ce3af5 (.)
  */
 class DatabaseConnection extends Model
 {
@@ -78,8 +88,18 @@ class DatabaseConnection extends Model
 
     public function getRows(): array
     {
+<<<<<<< HEAD
         $connections = config('database.connections');
         
+=======
+        /** @var array<string, mixed>|mixed $connections */
+        $connections = config('database.connections');
+        
+        if (!is_array($connections)) {
+            return [];
+        }
+        
+>>>>>>> 7ce3af5 (.)
         return Arr::map(
             $connections,
             fn (array $value, string $key): array => [
@@ -129,6 +149,7 @@ class DatabaseConnection extends Model
             return true;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         } catch (Exception $e) {
 =======
         } catch (\Exception $e) {
@@ -136,6 +157,9 @@ class DatabaseConnection extends Model
 =======
         } catch (Exception $e) {
 >>>>>>> 467a949 (.)
+=======
+        } catch (Exception $e) {
+>>>>>>> 7ce3af5 (.)
             report($e);
             return false;
         }
