@@ -2,21 +2,8 @@
 declare(strict_types=1);
 namespace Modules\Setting\Tests\Unit;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 use PDO;
 use Exception;
-=======
->>>>>>> 481b350 (.)
-=======
-use PDO;
-use Exception;
->>>>>>> 467a949 (.)
-=======
-use PDO;
-use Exception;
->>>>>>> 7ce3af5 (.)
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\DB;
 use Mockery;
@@ -30,12 +17,7 @@ class DatabaseConnectionTest extends TestCase
      *
      * @return void
      */
-<<<<<<< HEAD
-    public function testDatabaseConnectionModelCanBeInstantiated()
-    {
-=======
     public function testDatabaseConnectionModelCanBeInstantiated(): void {
->>>>>>> 7ce3af5 (.)
         $connection = new DatabaseConnection();
 
         $this->assertInstanceOf(DatabaseConnection::class, $connection);
@@ -46,12 +28,7 @@ class DatabaseConnectionTest extends TestCase
      *
      * @return void
      */
-<<<<<<< HEAD
-    public function testCastsAreConfiguredCorrectly()
-    {
-=======
     public function testCastsAreConfiguredCorrectly(): void {
->>>>>>> 7ce3af5 (.)
         $connection = new DatabaseConnection();
 
         $this->assertEquals([
@@ -66,24 +43,9 @@ class DatabaseConnectionTest extends TestCase
      *
      * @return void
      */
-<<<<<<< HEAD
-    public function testTestConnectionSucceeds()
-    {
-        // Mock PDO instance
-<<<<<<< HEAD
-<<<<<<< HEAD
-        $pdoMock = Mockery::mock(PDO::class);
-=======
-        $pdoMock = Mockery::mock(\PDO::class);
->>>>>>> 481b350 (.)
-=======
-        $pdoMock = Mockery::mock(PDO::class);
->>>>>>> 467a949 (.)
-=======
     public function testTestConnectionSucceeds(): void {
         // Mock PDO instance
         $pdoMock = Mockery::mock(PDO::class);
->>>>>>> 7ce3af5 (.)
 
         // Mock DB facade
         DB::shouldReceive('connection')
@@ -125,12 +87,7 @@ class DatabaseConnectionTest extends TestCase
      *
      * @return void
      */
-<<<<<<< HEAD
-    public function testTestConnectionFails()
-    {
-=======
     public function testTestConnectionFails(): void {
->>>>>>> 7ce3af5 (.)
         // Mock DB facade per simulare un errore di connessione
         DB::shouldReceive('connection')
             ->once()
@@ -139,19 +96,7 @@ class DatabaseConnectionTest extends TestCase
 
         DB::shouldReceive('getPdo')
             ->once()
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             ->andThrow(new Exception('Connection failed'));
-=======
-            ->andThrow(new \Exception('Connection failed'));
->>>>>>> 481b350 (.)
-=======
-            ->andThrow(new Exception('Connection failed'));
->>>>>>> 467a949 (.)
-=======
-            ->andThrow(new Exception('Connection failed'));
->>>>>>> 7ce3af5 (.)
 
         // Mock Config facade
         Config::shouldReceive('set')

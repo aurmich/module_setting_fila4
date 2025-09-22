@@ -4,21 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Setting\Models;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Exception;
 use Carbon\Carbon;
-=======
->>>>>>> 481b350 (.)
-=======
-use Exception;
-use Carbon\Carbon;
->>>>>>> 467a949 (.)
-=======
-use Exception;
-use Carbon\Carbon;
->>>>>>> 7ce3af5 (.)
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\DB;
@@ -41,23 +28,8 @@ use Webmozart\Assert\Assert;
  * @property string $engine
  * @property array $options
  * @property string $status
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @property Carbon $created_at
  * @property Carbon $updated_at
-=======
- * @property \Carbon\Carbon $created_at
- * @property \Carbon\Carbon $updated_at
->>>>>>> 481b350 (.)
-=======
- * @property Carbon $created_at
- * @property Carbon $updated_at
->>>>>>> 467a949 (.)
-=======
- * @property Carbon $created_at
- * @property Carbon $updated_at
->>>>>>> 7ce3af5 (.)
  */
 class DatabaseConnection extends Model
 {
@@ -88,10 +60,6 @@ class DatabaseConnection extends Model
 
     public function getRows(): array
     {
-<<<<<<< HEAD
-        $connections = config('database.connections');
-        
-=======
         /** @var array<string, mixed>|mixed $connections */
         $connections = config('database.connections');
         
@@ -99,7 +67,6 @@ class DatabaseConnection extends Model
             return [];
         }
         
->>>>>>> 7ce3af5 (.)
         return Arr::map(
             $connections,
             fn (array $value, string $key): array => [
@@ -147,19 +114,7 @@ class DatabaseConnection extends Model
             DB::connection('test_connection')->getPdo();
 
             return true;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         } catch (Exception $e) {
-=======
-        } catch (\Exception $e) {
->>>>>>> 481b350 (.)
-=======
-        } catch (Exception $e) {
->>>>>>> 467a949 (.)
-=======
-        } catch (Exception $e) {
->>>>>>> 7ce3af5 (.)
             report($e);
             return false;
         }

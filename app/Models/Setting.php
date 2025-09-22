@@ -4,51 +4,20 @@ declare(strict_types=1);
 
 namespace Modules\Setting\Models;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 467a949 (.)
-=======
->>>>>>> 7ce3af5 (.)
 use Illuminate\Support\Carbon;
 use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 use Modules\Media\Models\Media;
 use Modules\Setting\Database\Factories\SettingFactory;
 use Illuminate\Database\Eloquent\Builder;
 use Modules\Xot\Contracts\ProfileContract;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 481b350 (.)
-=======
->>>>>>> 467a949 (.)
-=======
 use Illuminate\Database\Eloquent\Collection;
 use Closure;
 use Illuminate\Contracts\Database\Query\Expression;
->>>>>>> 7ce3af5 (.)
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
 /**
-<<<<<<< HEAD
- * @property int                                                                                                        $id
- * @property string                                                                                                     $group
- * @property string                                                                                                     $name
- * @property int                                                                                                        $locked
- * @property string                                                                                                     $payload
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 467a949 (.)
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property MediaCollection<int, Media> $media
- * @property int|null                                                                                                   $media_count
- *
-=======
  * @property int $id
  * @property string $group
  * @property string $name
@@ -58,7 +27,6 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @property Carbon|null $updated_at
  * @property MediaCollection<int, Media> $media
  * @property int|null $media_count
->>>>>>> 7ce3af5 (.)
  * @method static SettingFactory factory($count = null, $state = [])
  * @method static Builder|Setting newModelQuery()
  * @method static Builder|Setting newQuery()
@@ -70,36 +38,6 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @method static Builder|Setting whereName($value)
  * @method static Builder|Setting wherePayload($value)
  * @method static Builder|Setting whereUpdatedAt($value)
-<<<<<<< HEAD
- *
- * @property ProfileContract|null $creator
- * @property ProfileContract|null $updater
-<<<<<<< HEAD
-=======
- * @property \Illuminate\Support\Carbon|null                                                                            $created_at
- * @property \Illuminate\Support\Carbon|null                                                                            $updated_at
- * @property \Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection<int, \Modules\Media\Models\Media> $media
- * @property int|null                                                                                                   $media_count
- *
- * @method static \Modules\Setting\Database\Factories\SettingFactory factory($count = null, $state = [])
- * @method static \Illuminate\Database\Eloquent\Builder|Setting      newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Setting      newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Setting      query()
- * @method static \Illuminate\Database\Eloquent\Builder|Setting      whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Setting      whereGroup($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Setting      whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Setting      whereLocked($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Setting      whereName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Setting      wherePayload($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Setting      whereUpdatedAt($value)
- *
- * @property \Modules\Xot\Contracts\ProfileContract|null $creator
- * @property \Modules\Xot\Contracts\ProfileContract|null $updater
->>>>>>> 481b350 (.)
-=======
->>>>>>> 467a949 (.)
- *
-=======
  * @property ProfileContract|null $creator
  * @property ProfileContract|null $updater
  * @method static Setting|null first()
@@ -109,7 +47,6 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @method static Builder<static>|Setting where((string|Closure) $column, mixed $operator = null, mixed $value = null, string $boolean = 'and')
  * @method static Builder<static>|Setting whereNotNull((string|Expression) $columns)
  * @method static int count(string $columns = '*')
->>>>>>> 7ce3af5 (.)
  * @mixin \Eloquent
  */
 class Setting extends BaseModel implements HasMedia

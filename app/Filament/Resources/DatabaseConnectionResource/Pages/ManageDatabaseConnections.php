@@ -4,19 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Setting\Filament\Resources\DatabaseConnectionResource\Pages;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-use Filament\Actions\CreateAction;
-=======
->>>>>>> 481b350 (.)
-=======
-use Filament\Actions\CreateAction;
->>>>>>> 467a949 (.)
-=======
 use Filament\Actions\CreateAction;
 use Filament\Actions\Action;
->>>>>>> 7ce3af5 (.)
 use Filament\Actions;
 use Filament\Resources\Pages\ManageRecords;
 use Modules\Setting\Filament\Resources\DatabaseConnectionResource;
@@ -28,19 +17,7 @@ class ManageDatabaseConnections extends ManageRecords
     protected function getHeaderActions(): array
     {
         return [
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             CreateAction::make(),
-=======
-            Actions\CreateAction::make(),
->>>>>>> 481b350 (.)
-=======
-            CreateAction::make(),
->>>>>>> 467a949 (.)
-=======
-            CreateAction::make(),
->>>>>>> 7ce3af5 (.)
         ];
     }
 }
