@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 lament::page>
+=======
+<x-filament::page>
+>>>>>>> c862621 (.)
     <table>
     <thead>
         <tr>
