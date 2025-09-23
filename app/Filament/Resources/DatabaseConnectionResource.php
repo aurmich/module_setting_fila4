@@ -44,10 +44,14 @@ class DatabaseConnectionResource extends Resource
     {
         return $form
 <<<<<<< HEAD
+<<<<<<< HEAD
             ->components([
 =======
             ->schema([
 >>>>>>> c862621 (.)
+=======
+            ->schema([
+>>>>>>> a72ac18 (.)
                 TextInput::make('name')
                     ->required()
                     ->maxLength(255),
