@@ -4,11 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Setting\Filament\Resources;
 
-<<<<<<< HEAD
-use Filament\Forms\Form;
-=======
 use Filament\Schemas\Schema;
->>>>>>> c862621 (.)
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Toggle;
@@ -40,18 +36,10 @@ class DatabaseConnectionResource extends Resource
 
     protected static ?int $navigationSort = 1;
 
-    public static function form(\Filament\Schemas\Schema $form): \Filament\Schemas\Schema
+    public static function form(Schema $schema): Schema
     {
-        return $form
-<<<<<<< HEAD
-<<<<<<< HEAD
+        return $schema
             ->components([
-=======
-            ->schema([
->>>>>>> c862621 (.)
-=======
-            ->schema([
->>>>>>> a72ac18 (.)
                 TextInput::make('name')
                     ->required()
                     ->maxLength(255),

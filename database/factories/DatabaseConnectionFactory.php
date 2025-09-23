@@ -17,11 +17,7 @@ class DatabaseConnectionFactory extends Factory
     /**
      * The name of the factory's corresponding model.
      *
-<<<<<<< HEAD
-     * @var string
-=======
      * @var class-string<DatabaseConnection>
->>>>>>> a72ac18 (.)
      */
     protected $model = DatabaseConnection::class;
 
