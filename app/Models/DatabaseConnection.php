@@ -4,14 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\Setting\Models;
 
-use Exception;
 use Carbon\Carbon;
+use Exception;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Arr;
 use Sushi\Sushi;
-use Webmozart\Assert\Assert;
 
 /**
  * @property string $name
@@ -62,11 +61,11 @@ class DatabaseConnection extends Model
     {
         /** @var array<string, mixed>|mixed $connections */
         $connections = config('database.connections');
-        
-        if (!is_array($connections)) {
+
+        if (! is_array($connections)) {
             return [];
         }
-        
+
         return Arr::map(
             $connections,
             fn (array $value, string $key): array => [
@@ -116,6 +115,7 @@ class DatabaseConnection extends Model
             return true;
         } catch (Exception $e) {
             report($e);
+
             return false;
         }
     }

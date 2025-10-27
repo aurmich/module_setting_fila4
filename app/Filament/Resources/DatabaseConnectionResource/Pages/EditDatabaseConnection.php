@@ -4,12 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Setting\Filament\Resources\DatabaseConnectionResource\Pages;
 
-use Filament\Actions\DeleteAction;
 use Filament\Actions\Action;
-use Modules\Setting\Models\DatabaseConnection;
-use Filament\Actions;
+use Filament\Actions\DeleteAction;
 use Filament\Resources\Pages\EditRecord;
 use Modules\Setting\Filament\Resources\DatabaseConnectionResource;
+use Modules\Setting\Models\DatabaseConnection;
 
 class EditDatabaseConnection extends EditRecord
 {
@@ -34,8 +33,8 @@ class EditDatabaseConnection extends EditRecord
     {
         /** @var DatabaseConnection|null $record */
         $record = $this->record;
-        
-        if ($record && 'active' === $record->status) {
+
+        if ($record && $record->status === 'active') {
             $record->testConnection();
         }
     }

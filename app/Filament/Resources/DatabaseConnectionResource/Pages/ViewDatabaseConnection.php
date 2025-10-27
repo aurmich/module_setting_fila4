@@ -4,13 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Setting\Filament\Resources\DatabaseConnectionResource\Pages;
 
-use Filament\Actions\EditAction;
-use Filament\Actions\DeleteAction;
 use Filament\Actions\Action;
-use Modules\Setting\Models\DatabaseConnection;
-use Filament\Actions;
+use Filament\Actions\DeleteAction;
+use Filament\Actions\EditAction;
 use Filament\Resources\Pages\ViewRecord;
 use Modules\Setting\Filament\Resources\DatabaseConnectionResource;
+use Modules\Setting\Models\DatabaseConnection;
 
 class ViewDatabaseConnection extends ViewRecord
 {
@@ -31,4 +30,4 @@ class ViewDatabaseConnection extends ViewRecord
                 ->color('success'),
         ];
     }
-} 
+}

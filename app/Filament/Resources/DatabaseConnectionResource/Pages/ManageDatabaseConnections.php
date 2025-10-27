@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace Modules\Setting\Filament\Resources\DatabaseConnectionResource\Pages;
 
 use Filament\Actions\CreateAction;
-use Filament\Actions\Action;
-use Filament\Actions;
 use Filament\Resources\Pages\ManageRecords;
 use Modules\Setting\Filament\Resources\DatabaseConnectionResource;
 

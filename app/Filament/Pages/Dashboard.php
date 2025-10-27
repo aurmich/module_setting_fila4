@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Setting\Filament\Pages;
 
-use Modules\Xot\Filament\Pages\XotBaseDashboard;
 use Illuminate\Support\Facades\Process as LaravelProcess;
+use Modules\Xot\Filament\Pages\XotBaseDashboard;
 
 class Dashboard extends XotBaseDashboard
 {
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-document-text';
+    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-document-text';
 
     protected string $view = 'setting::filament.pages.dashboard';
 

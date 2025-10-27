@@ -1,35 +1,35 @@
 <?php
+
 declare(strict_types=1);
+
 namespace Modules\Setting\Tests\Unit;
 
-use PDO;
 use Exception;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\DB;
 use Mockery;
 use Modules\Setting\Models\DatabaseConnection;
+use PDO;
 use Tests\TestCase;
 
 class DatabaseConnectionTest extends TestCase
 {
     /**
      * Verifica che il modello DatabaseConnection possa essere istanziato.
-     *
-     * @return void
      */
-    public function testDatabaseConnectionModelCanBeInstantiated(): void {
-        $connection = new DatabaseConnection();
+    public function test_database_connection_model_can_be_instantiated(): void
+    {
+        $connection = new DatabaseConnection;
 
         $this->assertInstanceOf(DatabaseConnection::class, $connection);
     }
 
     /**
      * Verifica che i casts siano definiti correttamente.
-     *
-     * @return void
      */
-    public function testCastsAreConfiguredCorrectly(): void {
-        $connection = new DatabaseConnection();
+    public function test_casts_are_configured_correctly(): void
+    {
+        $connection = new DatabaseConnection;
 
         $this->assertEquals([
             'port' => 'integer',
@@ -40,10 +40,9 @@ class DatabaseConnectionTest extends TestCase
 
     /**
      * Verifica che il metodo testConnection funzioni correttamente quando la connessione ha successo.
-     *
-     * @return void
      */
-    public function testTestConnectionSucceeds(): void {
+    public function test_test_connection_succeeds(): void
+    {
         // Mock PDO instance
         $pdoMock = Mockery::mock(PDO::class);
 
@@ -84,10 +83,9 @@ class DatabaseConnectionTest extends TestCase
 
     /**
      * Verifica che il metodo testConnection ritorni false quando la connessione fallisce.
-     *
-     * @return void
      */
-    public function testTestConnectionFails(): void {
+    public function test_test_connection_fails(): void
+    {
         // Mock DB facade per simulare un errore di connessione
         DB::shouldReceive('connection')
             ->once()

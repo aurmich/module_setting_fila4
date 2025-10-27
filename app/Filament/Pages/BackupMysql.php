@@ -11,9 +11,9 @@ use Webmozart\Assert\Assert;
 
 class BackupMysql extends Page
 {
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-cog';
+    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-cog';
 
-    protected static string | \UnitEnum | null $navigationGroup = 'Settings';
+    protected static string|\UnitEnum|null $navigationGroup = 'Settings';
 
     protected string $view = 'setting::filament.pages.backup-mysql';
 
