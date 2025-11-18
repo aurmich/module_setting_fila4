@@ -19,7 +19,7 @@ abstract class BaseModel extends Model
 {
     // use Searchable;
     // use Cachable;
-    use HasFactory;
+    use \Modules\Xot\Models\Traits\HasXotFactory;
     use Updater;
 
     /**
