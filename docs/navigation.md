@@ -32,3 +32,6 @@ return [
 // blade files
 $page->navigation
 ```
+
+## Aggiornamento 19/11/2025
+- La voce `setting::database_connection.navigation.label` è ora tradotta come “Connessioni database”, eliminando i placeholder `.navigation` e mantenendo coerente la tassonomia del pannello.

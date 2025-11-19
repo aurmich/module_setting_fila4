@@ -27,9 +27,9 @@ class DatabaseConnectionResource extends Resource
 {
     protected static ?string $model = DatabaseConnection::class;
 
-    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-database';
+    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-database';
 
-    protected static string|\UnitEnum|null $navigationGroup = 'Configurazione';
+    protected static string | \UnitEnum | null $navigationGroup = 'Configurazione';
 
     protected static ?int $navigationSort = 1;
 

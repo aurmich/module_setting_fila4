@@ -11,9 +11,9 @@ use Webmozart\Assert\Assert;
 
 class BackupMysql extends Page
 {
-    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-cog';
+    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-cog';
 
-    protected static string|\UnitEnum|null $navigationGroup = 'Settings';
+    protected static string | \UnitEnum | null $navigationGroup = 'Settings';
 
     protected string $view = 'setting::filament.pages.backup-mysql';
 
@@ -34,7 +34,14 @@ class BackupMysql extends Page
     {
         Assert::isArray($connections = config('database.connections'));
 
-        $connections = array_filter($connections, fn ($item): bool => $item['driver'] === 'mysql');
+        $connections = array_filter($connections, function (mixed $item): bool {
+            // Type narrowing: ensure item is array with driver key
+            if (! is_array($item)) {
+                return false;
+            }
+            $driver = isset($item['driver']) && is_string($item['driver']) ? $item['driver'] : '';
+            return $driver === 'mysql';
+        });
 
         // $connections=collect($connections)->keyBy('database');
         return ['connections' => $connections];

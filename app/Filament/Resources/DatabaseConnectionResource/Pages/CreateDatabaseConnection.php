@@ -14,7 +14,9 @@ class CreateDatabaseConnection extends CreateRecord
 
     protected function getRedirectUrl(): string
     {
-        return $this->getResource()::getUrl('index');
+        $resource = $this->getResource();
+        $url = $resource::getUrl('index');
+        return is_string($url) ? $url : '';
     }
 
     protected function afterCreate(): void

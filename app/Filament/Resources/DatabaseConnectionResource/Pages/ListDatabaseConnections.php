@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Setting\Filament\Resources\DatabaseConnectionResource\Pages;
 
+use Modules\Setting\Models\DatabaseConnection;
 use Filament\Actions\Action;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\CreateAction;
@@ -76,7 +77,11 @@ class ListDatabaseConnections extends ListRecords
                 EditAction::make(),
                 DeleteAction::make(),
                 Action::make('test')
-                    ->action(fn ($record) => $record->testConnection())
+                    ->action(function ($record): void {
+                        if ($record instanceof DatabaseConnection) {
+                            $record->testConnection();
+                        }
+                    })
                     ->icon('heroicon-o-check-circle')
                     ->color('success'),
             ])
